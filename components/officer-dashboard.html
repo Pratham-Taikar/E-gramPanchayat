@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Officer Dashboard | Digital E Gram Panchayat</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Firebase SDKs -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
+  <!-- Firebase config -->
+  <script type="module" src="/firebase/firebase-config.js"></script>
+
+  <!-- Officer functions -->
+  <script type="module" src="../assets/js/officer.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Officer Dashboard</h2>
+
+    <button class="btn" id="createService">+ Create New Service</button>
+
+    <div id="createServiceForm" class="update-profile-form" style="display:none;">
+      <h3>Create New Service</h3>
+      <input type="text" id="newServiceTitle" placeholder="Service Title" />
+      <textarea id="newServiceDescription" placeholder="Service Description"></textarea>
+      <button class="btn" id="saveServiceBtn">Create Service</button>
+      <button class="btn cancel-btn" id="cancelServiceBtn">Cancel</button>
+    </div>
+
+    <h3>Available Government Schemes</h3>
+    <table id="servicesTable">
+      <thead>
+        <tr>
+          <th>Sr No.</th>
+          <th>Service Title</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="servicesList"></tbody>
+    </table>
+    <h3>Citizen Applications</h3>
+    <table id="applicationsTable">
+      <thead>
+        <tr>
+          <th>Sr No.</th>
+          <th>Service ID</th>
+          <th>User ID</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="applicationsList"></tbody>
+    </table>
+
+
+    <button class="btn logout" id="logoutBtn">Logout</button>
+  </div>
+</body>
+
+</html>
