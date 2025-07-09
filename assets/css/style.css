@@ -9,12 +9,32 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
 }
+
 .container {
   max-width: 1200px;
   margin: auto;
   text-align: center;
   padding: 2rem;
 }
+
+.container input{
+  padding: 10px 20px;
+  width: 35%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 0;
+}
+
+.container a{
+  text-decoration: none;
+  color: #03dac6;
+}
+
+.container select{
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
 .btn {
   background: var(--primary);
   color: #000;
@@ -23,6 +43,7 @@ body {
   text-decoration: none;
   border-radius: 10px;
 }
+
 @media screen and (max-width: 768px) {
   .container { padding: 1rem; }
 }
@@ -173,7 +194,6 @@ tr:nth-child(even) {
   margin: 6px 4px 0 0;
 }
 
-
 .update-profile-form textarea {
   display: block;
   margin: 8px 0;
@@ -184,3 +204,4 @@ tr:nth-child(even) {
   min-height: 80px;
   color: #000;
 }
+
